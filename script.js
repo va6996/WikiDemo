@@ -6,6 +6,22 @@ var left = d.getElementById('query');
 var title = d.getElementById('title');
 var language;
 
+function addlisteners(){
+	var Anchors = document.getElementsByTagName("a");
+
+	for (var i = 0; i < Anchors.length ; i++) {
+    	Anchors[i].addEventListener("click", 
+	        function (event) {
+	            event.preventDefault();
+	        	var xhttp = new XMLHttpRequest();
+				xhttp.addEventListener("load", display);
+			    xhttp.open("GET", this.href, true);
+	            xhttp.send();
+	        }, 
+	        false);
+	}
+}
+
 function fetch(){
 	var term = topic.value;
 	if(term === "")
@@ -38,6 +54,8 @@ function display(){
  	html = html.replace(/href="\.\//g, 'href="https://'+language+'.wikipedia.org/api/rest_v1/page/html/');
  	html = html.replace(/resource="\.\//g, 'resource="https://'+language+'.wikipedia.org/api/rest_v1/page/html/');
 	body.innerHTML = html;
+
+	addlisteners();
 }
 
 function openMenu(){
