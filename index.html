@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>
+		Wikipedia Demo
+		</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="head">
+			<div id="ham" onclick="openMenu()"><img src="ham.png" id="img"></div>
+			<div id="title">
+				Wikipedia Demo
+			</div>
+		</div>
+		<div class="page">
+			<div class="left" id="query">
+				<input type="text" id="topic">
+				<br/>
+				<select id="lang">
+				  <option value="en">English</option>
+				  <option value="hi">Hindi</option>
+				  <option value="zh">Chinese</option>
+				  <option value="de">German</option>
+				  <option value="fr">French</option>
+				  <option value="js">Japanese</option>
+				  <option value="ta">Tamil</option>
+				  <option value="es">Spanish</option>
+				  <option value="ar">Arabic</option>
+				  <option value="it">Italian</option>
+				</select>
+				<br/>
+				<button id="fetch" onclick="fetch()">Fetch</button>
+				<br/>
+			</div>
+			<div id="content" class="right">
+				
+				<div id="body">
+				Enter your query in the search box.
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="script.js"></script>
+	</body>
+</html>

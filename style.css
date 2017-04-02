@@ -1,0 +1,61 @@
+body{
+	margin: 0px;
+}
+.head{
+	width: 100%;
+	padding: 10px;
+}
+.page{
+	position: relative;
+	display:flex;
+}
+.left{
+	float: left;
+	padding: 10px;
+}
+#topic, #lang, #fetch{
+	position: relative;
+	margin: 5px;
+	width: 150px;
+}
+.right{
+	float: left;
+	padding: 10px;
+}
+#title{
+	font-size: 2em;
+	display: block;
+	text-align: center;
+}
+#ham{
+	display: none;
+	cursor: pointer;
+	position: fixed;
+	left: 20px;
+	top: 20px;
+}
+#img{
+	height: 50px;
+	width: 50px;
+}
+@media only screen and (max-width: 500px) {
+	.right{
+		width: 100%;
+	}
+	.left{
+		display: none;
+		float: none;
+		height: 100%;
+		position: fixed;
+		z-index: 1;
+		background-color: #CCCCCC;
+	}
+
+	#topic, #lang, #fetch{
+		margin: 5px;
+		width: 150px;
+	}
+	#ham{
+		display: inline-block;
+	}
+}
