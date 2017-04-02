@@ -50,7 +50,7 @@ function display(){
  	titleText = titleText[0].replace('<title>', '').replace('</title>', '').replace('_', ' ');
  	title.innerHTML = titleText;
  	html = html.replace(/src="\/\//g, 'src="https://');
- 	html = html.replace(/href="\//g, 'href="https://en.wikipedia.org/');
+ 	html = html.replace(/href="\//g, 'href="https://'+language+'.wikipedia.org/');
  	html = html.replace(/href="\.\//g, 'href="https://'+language+'.wikipedia.org/api/rest_v1/page/html/');
  	html = html.replace(/resource="\.\//g, 'resource="https://'+language+'.wikipedia.org/api/rest_v1/page/html/');
 	body.innerHTML = html;
